@@ -51,3 +51,14 @@ def intersectionAreaRect(spisok1, spisok2):
         return dlina * shirina
     else:
         return 0
+def intersectionAreaMultiRect(spiski):
+    s = 0
+    for cifra in range(len(spiski) - 1):
+        spisok_1 = spiski[cifra]
+        spisok_2 = spiski[cifra + 1]
+        if not isCorrectRect(spisok_1):
+            raise RectCorrectError("1й прямоугольник некорректный")
+        if not isCorrectRect(spisok_2):
+            raise RectCorrectError("2й прямоугольник некорректный")
+        s += intersectionAreaRect(spisok_1, spisok_2)
+    return s
