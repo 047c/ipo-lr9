@@ -1,3 +1,4 @@
+from itertools import combinations
 class RectCorrectError(Exception):
     pass
 def isCorrectRect(spisok):
