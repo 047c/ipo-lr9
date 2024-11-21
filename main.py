@@ -1,7 +1,7 @@
-from collision.rect import isCorrectRect
-from collision.rect import isCollisionRect
-from collision.rect import intersectionAreaRect
-from collision.rect import intersectionAreaMultiRect
+from collision import isCorrectRect
+from collision import isCollisionRect
+from collision import intersectionAreaRect
+from collision import intersectionAreaMultiRect
 status = True
 isCorrectRect_rect = [(-3.4, 1),(9.2, 10)] # <- Здесь можно заменить на свои значения для isCorrectRect
 isCollisionRect_rect1 = [(-3.4, 1),(9.2, 10)] # <- Здесь можно заменить на свои значения для isCollisionRect
