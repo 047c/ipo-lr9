@@ -10,9 +10,9 @@ def isCorrectRect(spisok):
         return False
 def isCollisionRect(spisok1, spisok2):
     if not isCorrectRect(spisok1):
-        raise RectCorrectError("1й прямоугольник некорректный")
+        raise ValueError("1й прямоугольник некорректный")
     if not isCorrectRect(spisok2):
-        raise RectCorrectError("2й прямоугольник некорректный")
+        raise ValueError("2й прямоугольник некорректный")
     kortezh1 = spisok1[0]
     kortezh2 = spisok1[1]
     kortezh3 = spisok2[0]
@@ -71,7 +71,7 @@ def intersectionAreaMultiRect(spiski):
 
     try:
         isCorrectRect(spiski)
-    except RectCorrectError as e:
+    except ValueError as e:
         print(e)
         return 0
 
